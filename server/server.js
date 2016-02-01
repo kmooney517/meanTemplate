@@ -4,7 +4,7 @@ var mongojs    = require('mongojs');
 var db         = mongojs('mongodb://chairleg:maggie@ds055535.mongolab.com:55535/mean_template', ['items']);
 var bodyParser = require('body-parser');
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/app/index.html'));
 app.use(bodyParser.json());
 
 app.get('/items', function(req, res) {
